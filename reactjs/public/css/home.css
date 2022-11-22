@@ -55,7 +55,9 @@ body{
 	text-decoration:none;}
 .menu-item:hover{
 	background:#C60A11;
-	cursor:pointer;}
+	cursor:pointer;
+}
+
 #main, #sidebar{
 	margin-top:10px;}	
 	

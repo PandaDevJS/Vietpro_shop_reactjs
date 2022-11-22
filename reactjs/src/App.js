@@ -1,4 +1,6 @@
 import React, { useEffect } from "react"
+import { Provider } from "react-redux";
+import store from "./redux-setup/store";
 import { getCategories } from "./services/Api";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -28,6 +30,7 @@ const App = () => {
   },[]);
   return (
     <>
+    <Provider store={store}>
       <BrowserRouter>
         <div>
           <Header />
@@ -47,7 +50,7 @@ const App = () => {
                     <Route path="/category-:id" element={<Category />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/success" element={<Success />} />
-                    <Route path="/productdetails" element={<ProductDetails />} />
+                    <Route path="/productdetails-:id" element={<ProductDetails />} />
                     <Route path="/*" element={<NotFound />} />
                     
                   </Routes>
@@ -59,6 +62,7 @@ const App = () => {
           <Footer />
         </div>
       </BrowserRouter>
+      </Provider>
     </>
   )
 }

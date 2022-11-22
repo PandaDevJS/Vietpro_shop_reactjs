@@ -22,7 +22,7 @@ body {
     float: left;
     list-style: none;
     text-transform: capitalize;
-    margin-right: 10px;
+    
     border-right: 1px solid #343A40;
     padding-right: 10px;
 }
